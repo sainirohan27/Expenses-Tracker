@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Expense Tracking System</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.8.1/css/bulma.css" />
+    <link rel="stylesheet" href="./css/add expense.css">
+    <script src="./scripts/expense.js"></script>
+</head>
+
+<body>
+
+    <div class="header">
+        Expense Tracking System
+    </div>
+
+
+    <div class="body">
+        <div class="expense-form">
+
+            
+            <div class="field">
+                <label class="label">Name</label>
+                <div class="control">
+                    <input class="input" type="text" placeholder="Name of expense" id="expense-form-name">
+                </div>
+                <p class="help is-danger" id="expense-form-alert-name"></p>
+            </div>
+
+          
+            <div class="field">
+                <label class="label">Category</label>
+                <div class="control">
+                    <div class="select">
+                        <select id="expense-form-category">
+                            <option>General</option>
+                            <option>Applicances</option>
+                            <option>Food</option>
+                            <option>Entertainment</option>
+                            <option>Bills</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Amount of expense -->
+            <!-- This field will check is the input is valid number or not. Default is 0.00 -->
+            <div class="field">
+                <label class="label">Amount</label>
+                <div class="control has-icons-left">
+                    <input class="input" type="text" placeholder="Amount of money" id="expense-form-amount">
+                    <span class="icon is-small is-left">₹</span>
+                </div>
+                <p class="help is-danger" id="expense-form-alert-amount"></p>
+            </div>
+
+            
+            <div class="field">
+                <label class="label">Description</label>
+                <div class="control">
+                    <textarea class="textarea" placeholder="Description of expense" id="expense-form-description"></textarea>
+                </div>
+            </div>
+
+           
+            <div class="field">
+                <p class="control">
+                    <button class="button is-success" id="button-add" onclick="addExpense(this)">
+                        Add
+                    </button>
+                </p>
+            </div>
+        </div>
+
+        <div class="display-area" id="expense-list">
+        </div>
+    </div>
+
+
+</body>
+
+</html>
